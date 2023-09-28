@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="brand"><img class="logo" src="logo.png" alt=""></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="precios.html">Precios</a></li>
+                <li><a class="onPage" href="foro.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor-madre">
+        <div class="titulo">
+            <h1>Contacto</h1>
+            <h3>¡Contáctanos para cualquier consulta o solicitud de información!</h3>
+        </div>
+
+        <form id="MyForm">
+            <section>
+                <label for="nombre">Nombre</label>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre">
+            </section>
+
+            <section>
+                <label for="apellido">Apellido</label>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido">
+            </section>
+
+            <section>
+                <label for="email">Correo Electronico: </label>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+            </section>
+            <button class="sendButon" type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <img src="logo.png" alt="" width="250px">
+    </footer>
+</body>
+</html>
