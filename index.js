@@ -20,5 +20,18 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Ejemplo: Llama a recibirDatoDesdeESP8266 con el estado "Inactiva" cuando llega un dato
-    recibirDatoDesdeESP8266("Inactiva");
+    // recibirDatoDesdeESP8266("Inactiva");
+
+    var socket = new WebSocket("https://gabolkn.github.io/Safe-RefillStation/");
+
+    // Evento cuando la conexión se establece
+    socket.onopen = function(event) {
+        console.log("Conexión WebSocket establecida.");
+    };
+
+    // Evento cuando se recibe un mensaje del servidor
+    socket.onmessage = function(event) {
+        var data = event.data;
+        recibirDatoDesdeESP8266(data);
+    };
 });
